@@ -123,9 +123,9 @@ class Corpus(object):
     def preprocess_doc(self, doc):
 
         # pre-process data
-        doc = tp.normalize.normalize_unicode(doc)
-        doc = tp.normalize_whitespace(doc)
-        doc = tp.normalize_quotation_marks(doc)
+        doc = tp.normalize.unicode(doc)
+        doc = tp.normalize.whitespace(doc)
+        doc = tp.normalize.quotation_marks(doc)
 
         # apply spaCy to tokenize doc
         doc = self.tokenizer(doc)
